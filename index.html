@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>SCOV GYM</title>
+  </head>
+  <body>
+    <nav class="navbar flex align-center">
+      <div class="flex align-center">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="SCOV logo" />
+        </div>
+        <ul class="nav-links flex">
+          <li><a href="about.html">About</a></li>
+          <li><a href="tour.html">Online Tour</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="equipments.html">Latest Equipments</a></li>
+        </ul>
+      </div>
+      <div class="flex align-center">
+        <a href="/ar/index.html" class="lang flex align-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <ellipse
+              cx="13.9987"
+              cy="11.6667"
+              rx="8.16667"
+              ry="8.16667"
+              stroke="#0080C8"
+              stroke-width="1.5"
+            />
+            <path
+              d="M4.66797 19.3234C6.87108 21.7849 10.0727 23.334 13.6361 23.334C20.2811 23.334 25.668 17.9471 25.668 11.3021C25.668 7.73871 24.1189 4.5371 21.6574 2.33398"
+              stroke="#0080C8"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M8.16797 5.31075C8.85068 5.95548 10.2571 7.71774 10.4209 9.60895C10.5741 11.3767 11.6992 12.8131 13.418 12.8326C14.0785 12.8401 14.7465 12.3452 14.7448 11.6602C14.7443 11.4484 14.7106 11.2318 14.6578 11.0326C14.5844 10.7554 14.5779 10.4366 14.7305 10.1104C15.2641 8.96939 16.3137 8.66289 17.1453 8.04322C17.5142 7.76839 17.8507 7.47847 17.999 7.24494C18.4087 6.60021 18.8183 5.31075 18.6135 4.66602"
+              stroke="#0080C8"
+              stroke-width="1.5"
+            />
+            <path
+              d="M22.168 12.834C21.9118 13.5581 21.7305 15.459 18.8377 15.4892C18.8377 15.4892 16.276 15.4892 15.5074 16.9374C14.8926 18.0961 15.2513 19.3512 15.5074 19.834"
+              stroke="#0080C8"
+              stroke-width="1.5"
+            />
+            <path
+              d="M14 25.6673V23.334"
+              stroke="#0080C8"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M14.0013 25.666H11.668"
+              stroke="#0080C8"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M16.3333 25.666H14"
+              stroke="#0080C8"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+          العربية
+        </a>
+        <div class="line"></div>
+        <button class="btn btn-main">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M14.0037 4H9.9963C6.21809 4 4.32899 4 3.15525 5.17157C2.27661 6.04858 2.0557 7.32572 2.00016 9.49444C1.99304 9.77248 2.22121 9.99467 2.49076 10.0652C3.35074 10.2901 3.98521 11.0711 3.98521 12C3.98521 12.9289 3.35074 13.7099 2.49076 13.9348C2.22121 14.0053 1.99304 14.2275 2.00016 14.5056C2.0557 16.6743 2.27661 17.9514 3.15525 18.8284C4.32899 20 6.21809 20 9.9963 20H14.0037C17.7819 20 19.671 20 20.8448 18.8284C21.7234 17.9514 21.9443 16.6743 21.9998 14.5056C22.007 14.2275 21.7788 14.0053 21.5092 13.9348C20.6493 13.7099 20.0148 12.9289 20.0148 12C20.0148 11.0711 20.6493 10.2901 21.5092 10.0652C21.7788 9.99467 22.007 9.77248 21.9998 9.49444C21.9443 7.32572 21.7234 6.04858 20.8448 5.17157C19.671 4 17.7819 4 14.0037 4Z"
+              stroke="white"
+              stroke-width="1.5"
+            />
+            <path
+              d="M11.1459 10.0225C11.5259 9.34084 11.7159 9 12 9C12.2841 9 12.4741 9.34084 12.8541 10.0225L12.9524 10.1989C13.0603 10.3926 13.1143 10.4894 13.1985 10.5533C13.2827 10.6172 13.3875 10.641 13.5972 10.6884L13.7881 10.7316C14.526 10.8986 14.895 10.982 14.9828 11.2643C15.0706 11.5466 14.819 11.8407 14.316 12.429L14.1858 12.5812C14.0429 12.7483 13.9714 12.8319 13.9392 12.9353C13.9071 13.0387 13.9179 13.1502 13.9395 13.3733L13.9592 13.5763C14.0352 14.3612 14.0733 14.7536 13.8435 14.9281C13.6136 15.1025 13.2682 14.9435 12.5773 14.6254L12.3986 14.5431C12.2022 14.4527 12.1041 14.4075 12 14.4075C11.8959 14.4075 11.7978 14.4527 11.6014 14.5431L11.4227 14.6254C10.7318 14.9435 10.3864 15.1025 10.1565 14.9281C9.92674 14.7536 9.96476 14.3612 10.0408 13.5763L10.0605 13.3733C10.0821 13.1502 10.0929 13.0387 10.0608 12.9353C10.0286 12.8319 9.95713 12.7483 9.81418 12.5812L9.68403 12.429C9.18097 11.8407 8.92945 11.5466 9.01723 11.2643C9.10501 10.982 9.47396 10.8986 10.2119 10.7316L10.4028 10.6884C10.6125 10.641 10.7173 10.6172 10.8015 10.5533C10.8857 10.4894 10.9397 10.3926 11.0476 10.1989L11.1459 10.0225Z"
+              stroke="white"
+              stroke-width="1.5"
+            />
+          </svg>
+          Join Now
+        </button>
+      </div>
+    </nav>
+
+    <div class="top-right-corner"></div>
+    <div class="top-left-corner"></div>
+
+    <header class="hero">
+      <div class="hero-content flex justify-center align-center">
+        <h1 class="hero-title">
+          start your fitness journey & <br />
+          find your inner hero at
+          <span style="text-transform: uppercase; color: #0080c8"
+            >Scov Gym</span
+          >
+        </h1>
+        <p class="hero-text">
+          Join Scov Gym today and enjoy personalized training programs designed
+          to help you achieve your fitness goals. <br />
+          Start your journey now to transform your life, build a strong, healthy
+          body, and unleash your potential.
+          <span class="hero-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="105"
+              height="118"
+              viewBox="0 0 105 118"
+              fill="none"
+            >
+              <path
+                d="M2.62025 20.8746C11.7987 19.9847 37.954 17.1442 42.2432 30.5628C44.028 36.1462 43.3156 44.8217 39.6113 49.7151C31.6565 60.2236 12.1827 54.2651 23.4823 41.031C29.8193 33.6091 42.0788 34.9669 50.7467 36.048C63.5238 37.6416 71.4624 45.3218 79.1587 54.9113C83.0672 59.7813 95.9823 86.325 94.1089 85.9416"
+                stroke="#D9B283"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M100.139 95.0754C98.2253 94.6136 83.6892 90.6063 85.3988 91.3276C87.6365 92.2717 90.0425 93.0143 92.1487 94.2303C94.6405 95.669 97.4564 96.4573 99.7709 98.16C101.802 99.6541 101.396 86.3953 100.795 84.1498"
+                stroke="#D9B283"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+        </p>
+        <div class="btns flex align-center justify-center">
+          <button class="btn btn-main">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M14.0037 4H9.9963C6.21809 4 4.32899 4 3.15525 5.17157C2.27661 6.04858 2.0557 7.32572 2.00016 9.49444C1.99304 9.77248 2.22121 9.99467 2.49076 10.0652C3.35074 10.2901 3.98521 11.0711 3.98521 12C3.98521 12.9289 3.35074 13.7099 2.49076 13.9348C2.22121 14.0053 1.99304 14.2275 2.00016 14.5056C2.0557 16.6743 2.27661 17.9514 3.15525 18.8284C4.32899 20 6.21809 20 9.9963 20H14.0037C17.7819 20 19.671 20 20.8448 18.8284C21.7234 17.9514 21.9443 16.6743 21.9998 14.5056C22.007 14.2275 21.7788 14.0053 21.5092 13.9348C20.6493 13.7099 20.0148 12.9289 20.0148 12C20.0148 11.0711 20.6493 10.2901 21.5092 10.0652C21.7788 9.99467 22.007 9.77248 21.9998 9.49444C21.9443 7.32572 21.7234 6.04858 20.8448 5.17157C19.671 4 17.7819 4 14.0037 4Z"
+                stroke="white"
+                stroke-width="1.5"
+              />
+              <path
+                d="M11.1459 10.0225C11.5259 9.34084 11.7159 9 12 9C12.2841 9 12.4741 9.34084 12.8541 10.0225L12.9524 10.1989C13.0603 10.3926 13.1143 10.4894 13.1985 10.5533C13.2827 10.6172 13.3875 10.641 13.5972 10.6884L13.7881 10.7316C14.526 10.8986 14.895 10.982 14.9828 11.2643C15.0706 11.5466 14.819 11.8407 14.316 12.429L14.1858 12.5812C14.0429 12.7483 13.9714 12.8319 13.9392 12.9353C13.9071 13.0387 13.9179 13.1502 13.9395 13.3733L13.9592 13.5763C14.0352 14.3612 14.0733 14.7536 13.8435 14.9281C13.6136 15.1025 13.2682 14.9435 12.5773 14.6254L12.3986 14.5431C12.2022 14.4527 12.1041 14.4075 12 14.4075C11.8959 14.4075 11.7978 14.4527 11.6014 14.5431L11.4227 14.6254C10.7318 14.9435 10.3864 15.1025 10.1565 14.9281C9.92674 14.7536 9.96476 14.3612 10.0408 13.5763L10.0605 13.3733C10.0821 13.1502 10.0929 13.0387 10.0608 12.9353C10.0286 12.8319 9.95713 12.7483 9.81418 12.5812L9.68403 12.429C9.18097 11.8407 8.92945 11.5466 9.01723 11.2643C9.10501 10.982 9.47396 10.8986 10.2119 10.7316L10.4028 10.6884C10.6125 10.641 10.7173 10.6172 10.8015 10.5533C10.8857 10.4894 10.9397 10.3926 11.0476 10.1989L11.1459 10.0225Z"
+                stroke="white"
+                stroke-width="1.5"
+              />
+            </svg>
+            Join Now
+          </button>
+          <button class="btn btn-secondary">Take Virtual Tour</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="left-media">
+          <img src="./assets/media-right.png" alt="girl" />
+        </div>
+        <div
+          class="center-media"
+          style="
+            width: 56%;
+            height: 400px;
+            background-color: #eff5f9;
+            border-radius: 24px;
+          "
+        ></div>
+        <div class="right-media">
+          <img src="./assets/media-right.png" alt="girl" />
+        </div>
+      </div>
+      <div class="hero-statistics flex align-center section">
+        <div class="hero-statistic">
+          <h2 class="hero-statistic-number">+ 40</h2>
+          <h3 class="hero-statistic-text">Gym Equipments</h3>
+        </div>
+        <div class="hero-statistic">
+          <h2 class="hero-statistic-number">08</h2>
+          <h3 class="hero-statistic-text">Gym Services</h3>
+        </div>
+        <div class="hero-statistic">
+          <h2 class="hero-statistic-number">+ 20</h2>
+          <h3 class="hero-statistic-text">SCOV Trainer</h3>
+        </div>
+        <div class="hero-statistic">
+          <h2 class="hero-statistic-number">+ 4k</h2>
+          <h3 class="hero-statistic-text">Gym Members</h3>
+        </div>
+      </div>
+    </header>
+
+    <section class="section section-explore">
+      <h2 class="explore-title">
+        Explore <img src="./assets/camera.png" alt="camera" /> SCOV GYM <br />
+        <span
+          style="color: #134a9a; font-size: 60px; text-transform: capitalize"
+        >
+          Suez canal olympic village gym
+        </span>
+      </h2>
+      <p class="explore-text">
+        Scov is a comprehensive fitness community established under the auspices
+        of the Suez Canal Authority, dedicated to supporting every individual
+        striving for a healthier and more active lifestyle. We are committed to
+        helping you discover your potential by utilizing the latest
+        technologies, exceptional trainers, and innovative practices that
+        enhance your physical and mental well-being.
+      </p>
+
+      <div class="explore-img" style="position: relative">
+        <img src="./assets/explore-img.png" alt="SCOV GYM" />
+        <div style="position: absolute; bottom: 100px; right: 0; width: 500px">
+          <h2
+            style="
+              font-size: 48px;
+              font-weight: 700;
+              line-height: 100px;
+              text-transform: capitalize;
+            "
+          >
+            SCOV goal
+          </h2>
+          <p>
+            Our goal is to be the best for you, by building a path for
+            self-fulfillment and personal growth. At Scov Gym, we grow with you
+            and care about your journey towards a better life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tour">
+      <div style="width: max-content">
+        <div class="flex" style="gap: 32px">
+          <div>
+            <h2
+              style="
+                background-color: #f9e3c7;
+                width: fit-content;
+                padding: 20px 64px;
+                border-radius: 16px 16px 0 16px;
+                font-size: 80px;
+                font-weight: 500;
+              "
+            >
+              Embark on a Virtual Tour and
+            </h2>
+            <h2
+              style="
+                background-color: #f9e3c7;
+                width: fit-content;
+                padding: 20px 32px;
+                border-radius: 0 0 0 16px;
+                font-size: 80px;
+                position: relative;
+                inset-inline-end: -100%;
+                transform: translateX(-100%);
+                font-weight: 500;
+              "
+            >
+              Explore Every
+            </h2>
+          </div>
+          <div
+            class="box"
+            style="
+              width: 376px;
+              border-radius: 24px;
+              background: #d9d9d9;
+              margin-bottom: 32px;
+            "
+          ></div>
+        </div>
+        <div class="flex">
+          <div style="position: relative; top: -80px">
+            <img src="./assets/online-tour.png" alt="online tour" />
+          </div>
+          <div>
+            <div>
+              <h2
+                style="
+                  background-color: #f9e3c7;
+                  width: fit-content;
+                  padding: 20px 32px;
+                  border-radius: 0 16px 16px 16px;
+                  font-size: 80px;
+                  position: relative;
+                  margin-inline-start: 64px;
+                  height: fit-content;
+                  font-weight: 500;
+                "
+              >
+                Corner of the
+                <span
+                  style="
+                    color: #134a9a;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                  "
+                  >GYM!</span
+                >
+              </h2>
+            </div>
+
+            <p style="width: 20%; padding: 64px">
+              Explore our gym like never before with our immersive virtual tour!
+              Move freely through all areas, from the workout zones to the
+              relaxation lounges, and get a real feel of the space. Whether
+              you're planning your next visit or just curious, this tour allows
+              you to experience every detail and layout, making it easier for
+              you to navigate and make the most of your time at the gym. Start
+              your journey now and discover what we have to offer!
+            </p>
+            <div style="padding-inline: 64px">
+              <button class="btn btn-secondary">Take Virtual Tour</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="section-services flex align-center justify-center"
+      style="flex-direction: column"
+    >
+      <h2 class="services-title" style="text-align: center; margin-top: 100px">
+        SCOV GYM
+        <span style="color: #134a9a; text-transform: uppercase">Services</span>
+      </h2>
+      <p style="margin-block: 32px 64px; text-align: center">
+        Join Scov Gym today and enjoy personalized training programs designed to
+        help you achieve your fitness goals. <br />
+        Start your journey now to transform your life, build a strong, healthy
+        body, and unleash your potential.
+      </p>
+      <div class="auto_slider_container">
+        <ul class="auto_slider slider_1">
+          <li><img src="./assets/muscle.png" alt="muscle" /> Muscles</li>
+          <li>
+            <img src="./assets/healthy-life.png" alt="healthy life" />Healthy
+            Live
+          </li>
+          <li><img src="./assets/cardio.png" alt="cardio" />Cardio</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Plank</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Squat</li>
+          <li><img src="./assets/full-body.png" alt="full body" />Full Body</li>
+          <li>
+            <img
+              src="./assets/weight-lifting.png"
+              alt="weight lifting"
+            />Weightlifting
+          </li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Crunch</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Fit Course</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Trampoline</li>
+          <li><img src="./assets/leg.png" alt="leg" />Leg</li>
+        </ul>
+      </div>
+      <div class="auto_slider_container">
+        <ul class="auto_slider slider_2">
+          <li><img src="./assets/muscle.png" alt="muscle" />Trainers</li>
+          <li><img src="./assets/classes.png" alt="classes" />Classes</li>
+          <li><img src="./assets/spa.png" alt="spa" />Spa</li>
+          <li>
+            <img
+              src="./assets/therapist.png"
+              alt="Physiotherapist"
+            />Physiotherapist
+          </li>
+          <li><img src="./assets/muscle.png" alt="muscle" />CrossFit</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Trampoline</li>
+          <li><img src="./assets/box.png" alt="Box jump" />Box Jump</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Skipping Rope</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Chest Fly</li>
+          <li><img src="./assets/yoga.png" alt="yoga" />Yoga</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Sauna</li>
+          <li><img src="./assets/muscle.png" alt="muscle" />Jacuzzi</li>
+        </ul>
+      </div>
+      <div class="section section-services">
+        <div class="cards">
+          <div class="card">
+            <div class="flex align-center" style="justify-content: flex-end">
+              <img src="./assets/therapist.png" alt="Physiotherapist" />
+            </div>
+            <div>
+              <img src="./assets/spa-card.png" alt="Spa" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">SPA</h3>
+              <p class="card-text">
+                Excite Climb helps you build the confidence to step outside your
+                boundaries and achieve...
+              </p>
+              <p class="card-link"><a href="#">More Details</a></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex align-center" style="justify-content: flex-end">
+              <img src="./assets/therapist.png" alt="Physiotherapist" />
+            </div>
+            <div>
+              <img src="./assets/spa-card.png" alt="Spa" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">SPA</h3>
+              <p class="card-text">
+                Excite Climb helps you build the confidence to step outside your
+                boundaries and achieve...
+              </p>
+              <p class="card-link"><a href="#">More Details</a></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex align-center" style="justify-content: flex-end">
+              <img src="./assets/therapist.png" alt="Physiotherapist" />
+            </div>
+            <div>
+              <img src="./assets/spa-card.png" alt="Spa" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">SPA</h3>
+              <p class="card-text">
+                Excite Climb helps you build the confidence to step outside your
+                boundaries and achieve...
+              </p>
+              <p class="card-link"><a href="#">More Details</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-equipments">
+      <div class="equipments-content">
+        <div class="bg-blur"></div>
+        <h2 class="equipments-title">Latest Equipments</h2>
+        <p class="equipments-text">
+          Our gym boasts the latest cutting-edge equipment to elevate your
+          workout experience. With advanced cardio machines and state-of-the-art
+          strength training gear, we provide everything you need to achieve your
+          fitness goals. Regular updates ensure you have access to the best
+          fitness technology for effective, safe, and efficient training.
+        </p>
+      </div>
+      <div class="cards flex justify-center align-center">
+        <div class="card">
+          <h3 class="card-title">Skillmill</h3>
+          <p class="card-text">
+            Not your ordinary treadmill. Improve Power, Speed, Endurance and
+            Agility and get more results from your training...
+          </p>
+          <div class="card-img">
+            <img src="./assets/skillmill.png" alt="skillmill" />
+          </div>
+          <p class="card-link"><a href="#">More Details</a></p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Flexability Anterior</h3>
+          <p class="card-text">
+            Flexability Anterior helps to prevent back pain by stretching the
+            anterior muscles of the trunk and lower limbs...
+          </p>
+          <div class="card-img">
+            <img src="./assets/anterior.png" alt="anterior" />
+          </div>
+          <p class="card-link"><a href="#">More Details</a></p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Excite Climb</h3>
+          <p class="card-text">
+            Excite Climb helps you build the confidence to step outside your
+            boundaries and achieve extraordinary results...
+          </p>
+          <div class="card-img">
+            <img src="./assets/climb.png" alt="climb" />
+          </div>
+          <p class="card-link"><a href="#">More Details</a></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
