@@ -9,20 +9,21 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>SCOV GYM</title>
   </head>
   <body>
     <nav class="navbar flex align-center">
       <div class="flex align-center">
-        <div class="logo">
+        <div class="logo" style="width: 64px">
           <img src="./assets/logo.svg" alt="SCOV logo" />
         </div>
         <ul class="nav-links flex">
-          <li><a href="about.html">About</a></li>
-          <li><a href="tour.html">Online Tour</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="equipments.html">Latest Equipments</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#onlineTour">Online Tour</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#equipments">Latest Equipments</a></li>
         </ul>
       </div>
       <div class="flex align-center">
@@ -104,12 +105,12 @@
       </div>
     </nav>
 
-    <div class="top-right-corner"></div>
-    <div class="top-left-corner"></div>
+    <!-- <div class="top-right-corner"></div>
+    <div class="top-left-corner"></div> -->
 
     <header class="hero">
       <div class="hero-content flex justify-center align-center">
-        <h1 class="hero-title">
+        <h1 class="hero-title mobile-title">
           start your fitness journey & <br />
           find your inner hero at
           <span style="text-transform: uppercase; color: #0080c8"
@@ -169,48 +170,70 @@
           <button class="btn btn-secondary">Take Virtual Tour</button>
         </div>
       </div>
-      <div class="hero-media">
+      <div class="hero-media flex md:justify-between align-end gap-3">
         <div class="left-media">
-          <img src="./assets/media-right.png" alt="girl" />
+          <img src="./assets/media-left.png" alt="boy" />
         </div>
         <div
           class="center-media"
           style="
-            width: 56%;
-            height: 400px;
-            background-color: #eff5f9;
-            border-radius: 24px;
+            position: relative;
+            width: 50%;
+            border-radius: 12px;
+            overflow: hidden;
           "
-        ></div>
+        >
+          <iframe
+            src="https://player.vimeo.com/video/1016317642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            style="
+              position: absolute;
+              top: 13%;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 12px;
+              overflow: hidden;
+            "
+            title="SCOV GYM"
+          ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <div class="right-media">
           <img src="./assets/media-right.png" alt="girl" />
         </div>
       </div>
-      <div class="hero-statistics flex align-center section">
+      <div
+        class="hero-statistics flex flex-wrap align-center justify-center md:justify-between"
+      >
         <div class="hero-statistic">
-          <h2 class="hero-statistic-number">+ 40</h2>
-          <h3 class="hero-statistic-text">Gym Equipments</h3>
+          <h2 class="hero-statistic-number">+40</h2>
+          <h3 class="hero-statistic-text">Equipments</h3>
         </div>
         <div class="hero-statistic">
           <h2 class="hero-statistic-number">08</h2>
-          <h3 class="hero-statistic-text">Gym Services</h3>
+          <h3 class="hero-statistic-text">Services</h3>
         </div>
         <div class="hero-statistic">
-          <h2 class="hero-statistic-number">+ 20</h2>
-          <h3 class="hero-statistic-text">SCOV Trainer</h3>
+          <h2 class="hero-statistic-number">+20</h2>
+          <h3 class="hero-statistic-text">Trainer</h3>
         </div>
         <div class="hero-statistic">
-          <h2 class="hero-statistic-number">+ 4k</h2>
-          <h3 class="hero-statistic-text">Gym Members</h3>
+          <h2 class="hero-statistic-number">+4k</h2>
+          <h3 class="hero-statistic-text">Members</h3>
         </div>
       </div>
     </header>
 
-    <section class="section section-explore">
-      <h2 class="explore-title">
-        Explore <img src="./assets/camera.png" alt="camera" /> SCOV GYM <br />
+    <section class="section section-explore" id="about">
+      <h2 class="explore-title mobile-title">
+        Explore SCOV GYM
+        <img src="./assets/camera.png" alt="camera" class="inline camera" />
+        <br />
         <span
           style="color: #134a9a; font-size: 60px; text-transform: capitalize"
+          class="mobile-title"
         >
           Suez canal olympic village gym
         </span>
@@ -226,7 +249,7 @@
 
       <div class="explore-img" style="position: relative">
         <img src="./assets/explore-img.png" alt="SCOV GYM" />
-        <div style="position: absolute; bottom: 100px; right: 0; width: 500px">
+        <div class="goal">
           <h2
             style="
               font-size: 48px;
@@ -246,17 +269,18 @@
       </div>
     </section>
 
-    <section class="section section-tour">
+    <section class="section section-tour" id="onlineTour">
       <div style="width: max-content">
         <div class="flex" style="gap: 32px">
           <div>
             <h2
+              class=""
               style="
                 background-color: #f9e3c7;
                 width: fit-content;
-                padding: 20px 64px;
+                padding: 20px 80px;
                 border-radius: 16px 16px 0 16px;
-                font-size: 80px;
+                font-size: 4vw;
                 font-weight: 500;
               "
             >
@@ -268,7 +292,7 @@
                 width: fit-content;
                 padding: 20px 32px;
                 border-radius: 0 0 0 16px;
-                font-size: 80px;
+                font-size: 4vw;
                 position: relative;
                 inset-inline-end: -100%;
                 transform: translateX(-100%);
@@ -276,6 +300,30 @@
               "
             >
               Explore Every
+            </h2>
+            <h2
+              class="mobile-text"
+              style="
+                background-color: #f9e3c7;
+                width: fit-content;
+                padding: 20px 32px;
+                border-radius: 0 0 0 16px;
+                font-size: 4vw;
+                position: relative;
+                inset-inline-end: -100%;
+                transform: translateX(-100%);
+                font-weight: 500;
+              "
+            >
+              Corner of the
+              <span
+                style="
+                  color: #134a9a;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                "
+                >GYM!</span
+              >
             </h2>
           </div>
           <div
@@ -288,38 +336,50 @@
             "
           ></div>
         </div>
-        <div class="flex">
-          <div style="position: relative; top: -80px">
-            <img src="./assets/online-tour.png" alt="online tour" />
+        <div class="lg:flex flex-row">
+          <div class="online-tour-img" style="position: relative; top: -80px">
+            <img
+              src="./assets/online-tour.png"
+              alt="online tour"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow-clip-margin: content-box;
+                overflow: clip;
+              "
+            />
+          </div>
+          <div class="online-tour-img-mobile mt-16">
+            <img src="./assets/online-tour-mobile.png" alt="online-tour" />
           </div>
           <div>
-            <div>
-              <h2
+            <h2
+              class="web-text"
+              style="
+                background-color: #f9e3c7;
+                width: fit-content;
+                padding: 20px 32px;
+                border-radius: 0 16px 16px 16px;
+                font-size: 4vw;
+                position: relative;
+                margin-inline-start: 64px;
+                height: fit-content;
+                font-weight: 500;
+              "
+            >
+              Corner of the
+              <span
                 style="
-                  background-color: #f9e3c7;
-                  width: fit-content;
-                  padding: 20px 32px;
-                  border-radius: 0 16px 16px 16px;
-                  font-size: 80px;
-                  position: relative;
-                  margin-inline-start: 64px;
-                  height: fit-content;
-                  font-weight: 500;
+                  color: #134a9a;
+                  text-transform: uppercase;
+                  font-weight: 700;
                 "
+                >GYM!</span
               >
-                Corner of the
-                <span
-                  style="
-                    color: #134a9a;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                  "
-                  >GYM!</span
-                >
-              </h2>
-            </div>
+            </h2>
 
-            <p style="width: 20%; padding: 64px">
+            <p class="w-[11%] lg:w-1/5 lg:p-16 md:my-0 my-16">
               Explore our gym like never before with our immersive virtual tour!
               Move freely through all areas, from the workout zones to the
               relaxation lounges, and get a real feel of the space. Whether
@@ -328,7 +388,7 @@
               you to navigate and make the most of your time at the gym. Start
               your journey now and discover what we have to offer!
             </p>
-            <div style="padding-inline: 64px">
+            <div class="lg:px-16">
               <button class="btn btn-secondary">Take Virtual Tour</button>
             </div>
           </div>
@@ -339,8 +399,12 @@
     <section
       class="section-services flex align-center justify-center"
       style="flex-direction: column"
+      id="services"
     >
-      <h2 class="services-title" style="text-align: center; margin-top: 100px">
+      <h2
+        class="services-title mobile-title"
+        style="text-align: center; margin-top: 100px"
+      >
         SCOV GYM
         <span style="color: #134a9a; text-transform: uppercase">Services</span>
       </h2>
@@ -395,16 +459,16 @@
         </ul>
       </div>
       <div class="section section-services">
-        <div class="cards">
-          <div class="card">
+        <div class="cards columns-1 lg:columns-3 gap-5">
+          <div class="card md:basis-1/3">
             <div class="flex align-center" style="justify-content: flex-end">
               <img src="./assets/therapist.png" alt="Physiotherapist" />
             </div>
             <div>
-              <img src="./assets/spa-card.png" alt="Spa" />
+              <img src="./assets/physiotherapist.png" alt="Physiotherapist" />
             </div>
             <div class="card-content">
-              <h3 class="card-title">SPA</h3>
+              <h3 class="card-title mobile-title">Physiotherapist</h3>
               <p class="card-text">
                 Excite Climb helps you build the confidence to step outside your
                 boundaries and achieve...
@@ -412,7 +476,7 @@
               <p class="card-link"><a href="#">More Details</a></p>
             </div>
           </div>
-          <div class="card">
+          <div class="card md:basis-1/3">
             <div class="flex align-center" style="justify-content: flex-end">
               <img src="./assets/therapist.png" alt="Physiotherapist" />
             </div>
@@ -420,7 +484,7 @@
               <img src="./assets/spa-card.png" alt="Spa" />
             </div>
             <div class="card-content">
-              <h3 class="card-title">SPA</h3>
+              <h3 class="card-title mobile-title">SPA</h3>
               <p class="card-text">
                 Excite Climb helps you build the confidence to step outside your
                 boundaries and achieve...
@@ -428,15 +492,15 @@
               <p class="card-link"><a href="#">More Details</a></p>
             </div>
           </div>
-          <div class="card">
+          <div class="card md:basis-1/3">
             <div class="flex align-center" style="justify-content: flex-end">
               <img src="./assets/therapist.png" alt="Physiotherapist" />
             </div>
             <div>
-              <img src="./assets/spa-card.png" alt="Spa" />
+              <img src="./assets/personal-trainer.png" alt="personal-trainer" />
             </div>
             <div class="card-content">
-              <h3 class="card-title">SPA</h3>
+              <h3 class="card-title mobile-title">Personal Trainer</h3>
               <p class="card-text">
                 Excite Climb helps you build the confidence to step outside your
                 boundaries and achieve...
@@ -448,21 +512,35 @@
       </div>
     </section>
 
-    <section class="section section-equipments">
-      <div class="equipments-content">
+    <section class="section section-equipments" id="equipments">
+      <div class="equipments-content lg:flex gap-3">
         <div class="bg-blur"></div>
-        <h2 class="equipments-title">Latest Equipments</h2>
-        <p class="equipments-text">
-          Our gym boasts the latest cutting-edge equipment to elevate your
-          workout experience. With advanced cardio machines and state-of-the-art
-          strength training gear, we provide everything you need to achieve your
-          fitness goals. Regular updates ensure you have access to the best
-          fitness technology for effective, safe, and efficient training.
-        </p>
+        <div class="me-3 lg:flex-1">
+          <img src="./assets/equipments.png" alt="equipments img" />
+        </div>
+        <div class="md:ms-10 my-10 lg:flex-1 align-center relative">
+          <h2 class="equipments-title mobile-title">Latest Equipments</h2>
+          <p class="equipments-text">
+            Our gym boasts the latest cutting-edge equipment to elevate your
+            workout experience. With advanced cardio machines and
+            state-of-the-art strength training gear, we provide everything you
+            need to achieve your fitness goals. Regular updates ensure you have
+            access to the best fitness technology for effective, safe, and
+            efficient training.
+          </p>
+          <div
+            class="equipments-arrow mt-16 relative"
+            style="inset-inline-start: -20%"
+          >
+            <img src="./assets/equipment-arrow.png" alt="arrow" />
+          </div>
+        </div>
       </div>
-      <div class="cards flex justify-center align-center">
+      <div
+        class="cards gap-3 columns-1 lg:columns-3 justify-center align-center"
+      >
         <div class="card">
-          <h3 class="card-title">Skillmill</h3>
+          <h3 class="card-title mobile-title">Skillmill</h3>
           <p class="card-text">
             Not your ordinary treadmill. Improve Power, Speed, Endurance and
             Agility and get more results from your training...
@@ -473,7 +551,7 @@
           <p class="card-link"><a href="#">More Details</a></p>
         </div>
         <div class="card">
-          <h3 class="card-title">Flexability Anterior</h3>
+          <h3 class="card-title mobile-title">Flexability Anterior</h3>
           <p class="card-text">
             Flexability Anterior helps to prevent back pain by stretching the
             anterior muscles of the trunk and lower limbs...
@@ -484,7 +562,7 @@
           <p class="card-link"><a href="#">More Details</a></p>
         </div>
         <div class="card">
-          <h3 class="card-title">Excite Climb</h3>
+          <h3 class="card-title mobile-title">Excite Climb</h3>
           <p class="card-text">
             Excite Climb helps you build the confidence to step outside your
             boundaries and achieve extraordinary results...
@@ -496,6 +574,242 @@
         </div>
       </div>
     </section>
+
+    <section class="section section-people">
+      <div class="relative">
+        <h2 class="people-title mobile-title text-white text-center capitalize">
+          What People Say
+        </h2>
+        <p class="text-white text-center mt-8">
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts.
+        </p>
+
+        <div class="carousel mt-16 sticky" style="top: 100%">
+          <div class="carousel-item">
+            <div class="card md:flex justify-center gap-12">
+              <div class="card-img flex-1 flex justify-end">
+                <img src="./assets/person-1.png" alt="person1" />
+              </div>
+              <div class="card-content flex-1 flex flex-col justify-around">
+                <p
+                  class="card-text w-3/4 text-2xl leading-snug md:text-white md:w-full my-4"
+                >
+                  “Nulla a pretium diam, non accumsan odio. Nulla nec nisi
+                  massa. Etiam et velit elit. Praesent id neque lacus. Vivamus
+                  libero mi, accumsan in fringilla at, tristique at mi.”
+                </p>
+                <div class="arrows flex gap-5">
+                  <img
+                    class="cursor-pointer"
+                    src="./assets/arrow-left.svg"
+                    alt="arrow-left"
+                  />
+                  <img
+                    class="cursor-pointer"
+                    src="./assets/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-map" style="margin-top: 400px">
+      <div class="md:flex block items-center text-white">
+        <div
+          class="content"
+          style="
+            height: 850px;
+            width: 700px;
+            background: url('./assets/map-img.png') no-repeat center center;
+            padding: 75px 60px;
+          "
+        >
+          <h3 class="map-title mobile-title text-white mb-16">Scov Gym</h3>
+          <div class="flex flex-col justify-center align-center gap-5">
+            <div>
+              <label class="text-xl">Email</label>
+              <p class="mt-1 text-white text-2xl font-bold">
+                Info@businessname.com
+              </p>
+            </div>
+            <div>
+              <label class="text-xl">Business hours</label>
+              <p class="mt-1 text-white text-2xl font-bold">
+                Monday- Friday 10 AM - 11 PM
+              </p>
+            </div>
+            <div>
+              <label class="text-xl">Phone</label>
+              <p class="mt-1 text-white text-2xl font-bold">123-456-7890</p>
+            </div>
+            <div>
+              <label class="text-xl">Business address</label>
+              <p class="mt-1 text-white text-2xl font-bold">
+                123 Loream Rd Suite 105 Loream DA, 12345
+              </p>
+            </div>
+            <div>
+              <label class="text-xl">Social Media</label>
+              <div class="flex gap-3 mt-1">
+                <i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="30"
+                    viewBox="0 0 32 30"
+                    fill="none"
+                  >
+                    <path
+                      d="M29.8183 0.321777H1.53442C0.854225 0.321777 0.304688 0.871315 0.304688 1.55151V29.8354C0.304688 30.5156 0.854225 31.0651 1.53442 31.0651H29.8183C30.4985 31.0651 31.0481 30.5156 31.0481 29.8354V1.55151C31.0481 0.871315 30.4985 0.321777 29.8183 0.321777ZM28.5886 28.6057H21.5138V19.1598H25.5104L26.1099 14.5214H21.5138V11.5585C21.5138 10.2135 21.8865 9.29884 23.8118 9.29884H26.2675V5.14849C25.8409 5.09084 24.3844 4.96403 22.6859 4.96403C19.1427 4.96403 16.7178 7.12759 16.7178 11.0973V14.5175H12.7135V19.1559H16.7216V28.6057H2.76416V2.78125H28.5886V28.6057Z"
+                      fill="white"
+                    />
+                  </svg>
+                </i>
+                <i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="30"
+                    viewBox="0 0 32 30"
+                    fill="none"
+                  >
+                    <path
+                      d="M29.8183 0.321777H1.53442C0.854225 0.321777 0.304688 0.871315 0.304688 1.55151V29.8354C0.304688 30.5156 0.854225 31.0651 1.53442 31.0651H29.8183C30.4985 31.0651 31.0481 30.5156 31.0481 29.8354V1.55151C31.0481 0.871315 30.4985 0.321777 29.8183 0.321777ZM28.5886 28.6057H21.5138V19.1598H25.5104L26.1099 14.5214H21.5138V11.5585C21.5138 10.2135 21.8865 9.29884 23.8118 9.29884H26.2675V5.14849C25.8409 5.09084 24.3844 4.96403 22.6859 4.96403C19.1427 4.96403 16.7178 7.12759 16.7178 11.0973V14.5175H12.7135V19.1559H16.7216V28.6057H2.76416V2.78125H28.5886V28.6057Z"
+                      fill="white"
+                    />
+                  </svg>
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.4284425606347!2d32.28963777626156!3d30.59367639233861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f859000de42ab9%3A0x6b0b1d08817090ec!2s%D9%8DSCOV%20GYM!5e0!3m2!1sen!2seg!4v1728086028790!5m2!1sen!2seg"
+            height="600"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="md:w-[800px] w-full"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-contact">
+      <div class="flex justify-center h-full">
+        <div class="flex flex-col justify-center mt-64 px-2 pb-16">
+          <div class="mt-32">
+            <h2 class="contact-title mobile-title text-center stroke-white">
+              Build Your Route To Self-Discovery!
+            </h2>
+            <p class="w-full md:w-4/5 m-auto text-center mb-64">
+              Join Scov Gym today and enjoy personalized training programs
+              designed to help you achieve your fitness goals. Start your
+              journey now to transform your life, build a strong, healthy body,
+              and unleash your potential.
+            </p>
+          </div>
+          <div
+            class="flex justify-center align-end relative mx-auto w-full md:w-2/5"
+          >
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="bg-white text-gray w-full"
+              style="
+                padding: 18px;
+                align-items: center;
+                border-radius: 16px;
+                border: 1px solid #e6e6e6;
+              "
+            />
+            <button
+              class="btn btn-main"
+              style="
+                padding: 12px 32px;
+                border-radius: 16px;
+                background: #134a9a;
+                color: white;
+                border: none;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+              "
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section section-footer bg-[#134a9a]">
+      <div class="footer-content lg:flex justify-between">
+        <div>
+          <img src="./assets/footer-img.png" alt="footer" class="w-full" />
+          <p class="text-white mt-16 md:w-[500px] mb-16">
+            Scov is a comprehensive fitness community established under the
+            auspices of the Suez Canal Authority.
+          </p>
+        </div>
+        <div
+          class="w-full lg:w-[500px]"
+          style="
+            border-radius: 9px;
+            border: 1px solid #0019ff;
+            background: radial-gradient(
+              107.32% 141.42% at 0% 0%,
+              rgba(0, 0, 0, 0.3) 0%,
+              rgba(0, 0, 0, 0) 100%
+            );
+
+            /* glass */
+            box-shadow: -2.462px -2.462px 123.085px 0px rgba(
+                255,
+                255,
+                255,
+                0.02
+              ) inset;
+            backdrop-filter: blur(10.339168548583984px);
+            padding: 32px;
+            height: fit-content;
+            position: relative;
+          "
+        >
+          <h3 class="text-white font-bold text-2xl">JOIN NOW!</h3>
+          <p class="text-white text-sm">
+            Far far away, behind the word mountains, far from...
+          </p>
+          <button class="btn btn-secondary text-white mx-0 mt-8">
+            Join Now
+          </button>
+          <div class="absolute" style="bottom: -30%; right: -80%; width: 100%">
+            <img
+              src="./assets/footer-img-2.png"
+              alt="dumble"
+              style="mix-blend-mode: multiply"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-16">
+        <img src="./assets/Line.png" alt="line" />
+      </div>
+      <div class="md:flex justify-between mt-16">
+        <p class="text-white">ⓒ2024 SCOV GYM. All rights reserved.</p>
+        <div class="cursor-pointer mt-16 md:mt-0">
+          <img src="./assets/back-top.png" alt="back to top arrow" />
+        </div>
+      </div>
+    </footer>
 
     <script src="app.js"></script>
   </body>
