@@ -116,7 +116,7 @@ function observeCounters() {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 1 }
   ); // Adjust the threshold based on when you want to trigger
 
   counters.forEach((counter) => {

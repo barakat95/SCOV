@@ -242,10 +242,10 @@ nav ul li a:hover {
   gap: 20px;
 }
 .slider_1 {
-  animation: rotation_1 20s linear infinite;
+  animation: rotation_1 10s linear infinite;
 }
 .slider_2 {
-  animation: rotation_2 20s linear infinite;
+  animation: rotation_2 10s linear infinite;
 }
 .auto_slider li {
   display: flex;
@@ -269,7 +269,7 @@ nav ul li a:hover {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(100%);
   }
 }
 @keyframes rotation_2 {
@@ -277,7 +277,7 @@ nav ul li a:hover {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -517,9 +517,9 @@ nav ul li a:hover {
     width: 100% !important;
   }
 
-  .section-people .swiper {
+  /* .section-people .swiper {
     overflow: visible !important;
-  }
+  } */
 }
 
 .section-tour-mobile {
@@ -544,31 +544,21 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-  .section-people .swiper-button-prev {
-    display: none;
-  }
-
+  .section-people .swiper-button-prev,
   .section-people .swiper-button-next {
-    display: none;
+    position: relative;
+    left: 0 !important;
+    margin-top: 16px;
   }
 }
 
-.swiper {
+.section-services .swiper {
   overflow: visible;
 }
 
 .section-people .swiper {
   overflow: hidden;
 }
-
-/* .swiper-scrollbar {
-  display: none;
-}
-
-.section-services .swiper-button-prev,
-.section-services .swiper-button-next {
-  display: none;
-} */
 
 .swiper-pagination {
   top: 105% !important;
