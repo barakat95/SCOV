@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>SCOV GYM</title>
@@ -27,7 +33,7 @@
         </ul>
       </div>
       <div class="flex align-center">
-        <a href="/ar/index.html" class="lang flex align-center">
+        <!-- <a href="/ar/index.html" class="lang flex align-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -79,8 +85,8 @@
             />
           </svg>
           العربية
-        </a>
-        <div class="line"></div>
+        </a> -->
+        <!-- <div class="line"></div> -->
         <button class="btn btn-main">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -210,24 +216,36 @@
         </div>
       </div>
       <div
-        class="hero-statistics flex flex-wrap align-center justify-center md:justify-between"
+        class="hero-statistics flex flex-wrap align-center justify-center md:justify-between relative"
       >
-        <div class="hero-statistic">
-          <h2 class="hero-statistic-number">+40</h2>
+        <img
+          src="assets/SCOV.png"
+          alt="scov"
+          class="absolute w-[50%] md:w-[15%]"
+          style="top: 16px; right: 0"
+        />
+        <div class="hero-statistic border-r border-opacity-50">
+          <h2 class="hero-statistic-number counter" data-target="40">0</h2>
           <h3 class="hero-statistic-text">Equipments</h3>
         </div>
-        <div class="hero-statistic">
-          <h2 class="hero-statistic-number">08</h2>
+        <div class="hero-statistic border-r">
+          <h2 class="hero-statistic-number counter" data-target="8">0</h2>
           <h3 class="hero-statistic-text">Services</h3>
         </div>
-        <div class="hero-statistic">
-          <h2 class="hero-statistic-number">+20</h2>
+        <div class="hero-statistic border-r">
+          <h2 class="hero-statistic-number counter" data-target="20">0</h2>
           <h3 class="hero-statistic-text">Trainer</h3>
         </div>
         <div class="hero-statistic">
-          <h2 class="hero-statistic-number">+4k</h2>
+          <h2 class="hero-statistic-number counter" data-target="4000">0</h2>
           <h3 class="hero-statistic-text">Members</h3>
         </div>
+        <img
+          src="assets/GYM.png"
+          alt="gym"
+          class="absolute w-[50%] md:w-[15%]"
+          style="bottom: 16px; left: 0"
+        />
       </div>
     </header>
 
@@ -256,6 +274,7 @@
         <img src="./assets/explore-img.png" alt="SCOV GYM" />
         <div class="goal">
           <h2
+            class="mobile-title"
             style="
               font-size: 48px;
               font-weight: 700;
@@ -275,11 +294,11 @@
     </section>
 
     <section class="section section-tour" id="onlineTour">
-      <div style="width: max-content">
+      <!-- =============== Web Section ============== -->
+      <div style="width: max-content" class="section-tour-web">
         <div class="flex" style="gap: 32px">
           <div>
             <h2
-              class=""
               style="
                 background-color: #f9e3c7;
                 width: fit-content;
@@ -361,9 +380,6 @@
               "
             />
           </div>
-          <div class="online-tour-img-mobile mt-16">
-            <img src="./assets/online-tour-mobile.png" alt="online-tour" />
-          </div>
           <div>
             <h2
               class="web-text"
@@ -410,6 +426,54 @@
           </div>
         </div>
       </div>
+
+      <!-- ============== Mobile Section ============== -->
+      <div class="section-tour-mobile">
+        <h2 class="mobile-title" style="font-size: 30px !important">
+          Embark on a Virtual Tour and Explore Every Corner of the
+          <span style="color: #134a9a; text-transform: uppercase">GYM!</span>
+        </h2>
+        <div class="online-tour-img mt-16">
+          <img
+            src="./assets/online-tour.png"
+            alt="online tour"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              overflow-clip-margin: content-box;
+              overflow: clip;
+            "
+          />
+        </div>
+        <p class="my-16">
+          Explore our gym like never before with our immersive virtual tour!
+          Move freely through all areas, from the workout zones to the
+          relaxation lounges, and get a real feel of the space. Whether you're
+          planning your next visit or just curious, this tour allows you to
+          experience every detail and layout, making it easier for you to
+          navigate and make the most of your time at the gym. Start your journey
+          now and discover what we have to offer!
+        </p>
+        <div
+          class="box my-8"
+          style="border-radius: 24px; background: #d9d9d9; margin-bottom: 32px"
+        >
+          <img
+            src="./assets/tour.gif"
+            alt="tour"
+            class="h-full w-full rounded-lg"
+          />
+        </div>
+        <div>
+          <a
+            href="https://www.keypano.com/v/f080q6a36768m6-1720795212.html"
+            target="_blank"
+            class="btn btn-secondary w-[200px] m-auto"
+            >Take Virtual Tour</a
+          >
+        </div>
+      </div>
     </section>
 
     <section
@@ -438,8 +502,8 @@
             Live
           </li>
           <li><img src="./assets/cardio.png" alt="cardio" />Cardio</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Plank</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Squat</li>
+          <li><img src="./assets/plank.png" alt="muscle" />Plank</li>
+          <li><img src="./assets/squat.png" alt="muscle" />Squat</li>
           <li><img src="./assets/full-body.png" alt="full body" />Full Body</li>
           <li>
             <img
@@ -447,15 +511,14 @@
               alt="weight lifting"
             />Weightlifting
           </li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Crunch</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Fit Course</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Trampoline</li>
+          <li><img src="./assets/crunch.png" alt="muscle" />Crunch</li>
+          <li><img src="./assets/fit-course.png" alt="muscle" />Fit Course</li>
           <li><img src="./assets/leg.png" alt="leg" />Leg</li>
         </ul>
       </div>
       <div class="auto_slider_container">
         <ul class="auto_slider slider_2">
-          <li><img src="./assets/muscle.png" alt="muscle" />Trainers</li>
+          <li><img src="./assets/trainer.png" alt="muscle" />Trainers</li>
           <li><img src="./assets/classes.png" alt="classes" />Classes</li>
           <li><img src="./assets/spa.png" alt="spa" />Spa</li>
           <li>
@@ -464,67 +527,184 @@
               alt="Physiotherapist"
             />Physiotherapist
           </li>
-          <li><img src="./assets/muscle.png" alt="muscle" />CrossFit</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Trampoline</li>
+          <li><img src="./assets/crossfit.png" alt="muscle" />CrossFit</li>
           <li><img src="./assets/box.png" alt="Box jump" />Box Jump</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Skipping Rope</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Chest Fly</li>
+          <li><img src="./assets/rope.png" alt="muscle" />Skipping Rope</li>
+          <li><img src="./assets/chest-fly.png" alt="muscle" />Chest Fly</li>
           <li><img src="./assets/yoga.png" alt="yoga" />Yoga</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Sauna</li>
-          <li><img src="./assets/muscle.png" alt="muscle" />Jacuzzi</li>
         </ul>
       </div>
       <div class="section section-services">
-        <div class="cards columns-1 lg:columns-3 gap-5">
-          <div class="card md:basis-1/3">
-            <!-- <div class="flex align-center" style="justify-content: flex-end">
-              <img src="./assets/therapist.png" alt="Physiotherapist" />
-            </div> -->
-            <div>
-              <img src="./assets/physiotherapist.png" alt="Physiotherapist" />
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/classes.png" alt="class" />
+                </div>
+                <div>
+                  <img src="./assets/cardio-img.png" alt="treadmill" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">Cardio</h3>
+                  <p class="card-text">
+                    Cardio is exercise that is designed to benefit the heart and
+                    blood vessels.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
             </div>
-            <div class="card-content">
-              <h3 class="card-title mobile-title">Physiotherapist</h3>
-              <p class="card-text">
-                Assist patients in rehabilitating physical problems caused by
-                illness, injury, disability...
-              </p>
-              <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/classes.png" alt="classes" />
+                </div>
+                <div>
+                  <img src="./assets/crossfit-img.png" alt="crossfit" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">Corssfit</h3>
+                  <p class="card-text">
+                    Is high-intensity sessions of functional movements, designed
+                    to improve your physical fitness.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/classes.png" alt="classes" />
+                </div>
+                <div>
+                  <img src="./assets/trampoline.png" alt="trampoline" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">Trampoline</h3>
+                  <p class="card-text">
+                    A piece of sports equipment that you jump up and down on.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/classes.png" alt="classes" />
+                </div>
+                <div>
+                  <img src="./assets/yoga-img.png" alt="yoga" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">Yoga</h3>
+                  <p class="card-text">
+                    Is a physical, mental and spiritual practice that originated
+                    in ancient India.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/therapist.png" alt="Physiotherapist" />
+                </div>
+                <div>
+                  <img
+                    src="./assets/physiotherapist.png"
+                    alt="Physiotherapist"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">Physiotherapist</h3>
+                  <p class="card-text">
+                    Assist patients in rehabilitating physical problems caused
+                    by illness, injury, disability.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/spa.png" alt="SPA" />
+                </div>
+                <div>
+                  <img src="./assets/spa-card.png" alt="Spa" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">SPA</h3>
+                  <p class="card-text">
+                    Oasis of calm where people actively do something for the
+                    relaxation of body, mind, and spirit.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card md:basis-1/3">
+                <div
+                  class="flex align-center"
+                  style="justify-content: flex-end"
+                >
+                  <img src="./assets/therapist.png" alt="Physiotherapist" />
+                </div>
+                <div>
+                  <img
+                    src="./assets/personal-trainer.png"
+                    alt="personal-trainer"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title mobile-title">Personal Trainer</h3>
+                  <p class="card-text">
+                    Educating clients and enforcing policies regarding safe and
+                    proper use of equipments.
+                  </p>
+                  <!-- <p class="card-link"><a href="#">More Details</a></p> -->
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card md:basis-1/3">
-            <!-- <div class="flex align-center" style="justify-content: flex-end">
-              <img src="./assets/therapist.png" alt="Physiotherapist" />
-            </div> -->
-            <div>
-              <img src="./assets/spa-card.png" alt="Spa" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title mobile-title">SPA</h3>
-              <p class="card-text">
-                Oasis of calm where people actively do something for the
-                relaxation of body, mind, and spirit...
-              </p>
-              <!-- <p class="card-link"><a href="#">More Details</a></p> -->
-            </div>
-          </div>
-          <div class="card md:basis-1/3">
-            <!-- <div class="flex align-center" style="justify-content: flex-end">
-              <img src="./assets/therapist.png" alt="Physiotherapist" />
-            </div> -->
-            <div>
-              <img src="./assets/personal-trainer.png" alt="personal-trainer" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title mobile-title">Personal Trainer</h3>
-              <p class="card-text">
-                Educating clients and enforcing policies regarding safe and
-                proper use of equipments...
-              </p>
-              <!-- <p class="card-link"><a href="#">More Details</a></p> -->
-            </div>
-          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
+
+        <!-- <div class="cards columns-1 lg:columns-3 gap-5"></div> -->
       </div>
     </section>
 
@@ -601,36 +781,113 @@
           Vokalia and Consonantia, there live the blind texts.
         </p>
 
-        <div class="carousel mt-16 sticky" style="top: 100%">
-          <div class="carousel-item">
-            <div class="card md:flex justify-center gap-12">
-              <div class="card-img flex-1 flex justify-end">
-                <img src="./assets/person-1.png" alt="person1" />
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card md:flex justify-center gap-12 mt-16">
+                <div class="card-img flex-1 flex justify-end">
+                  <img src="./assets/person-1.png" alt="person1" />
+                </div>
+                <div class="card-content flex-1 flex flex-col justify-around">
+                  <p
+                    class="card-text w-3/4 text-2xl leading-snug md:text-white md:w-full my-4"
+                  >
+                    “Nulla a pretium diam, non accumsan odio. Nulla nec nisi
+                    massa. Etiam et velit elit. Praesent id neque lacus. Vivamus
+                    libero mi, accumsan in fringilla at, tristique at mi.”
+                  </p>
+                  <div class="arrows flex gap-5">
+                    <img
+                      class="cursor-pointer swiper-button-next"
+                      src="./assets/arrow-left.svg"
+                      alt="arrow-left"
+                    />
+                    <img
+                      class="cursor-pointer swiper-button-prev"
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="card-content flex-1 flex flex-col justify-around">
-                <p
-                  class="card-text w-3/4 text-2xl leading-snug md:text-white md:w-full my-4"
-                >
-                  “Nulla a pretium diam, non accumsan odio. Nulla nec nisi
-                  massa. Etiam et velit elit. Praesent id neque lacus. Vivamus
-                  libero mi, accumsan in fringilla at, tristique at mi.”
-                </p>
-                <div class="arrows flex gap-5">
-                  <img
-                    class="cursor-pointer"
-                    src="./assets/arrow-left.svg"
-                    alt="arrow-left"
-                  />
-                  <img
-                    class="cursor-pointer"
-                    src="./assets/arrow-right.svg"
-                    alt="arrow-right"
-                  />
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card md:flex justify-center gap-12 mt-16">
+                <div class="card-img flex-1 flex justify-end">
+                  <img src="./assets/person-1.png" alt="person1" />
+                </div>
+                <div class="card-content flex-1 flex flex-col justify-around">
+                  <p
+                    class="card-text w-3/4 text-2xl leading-snug md:text-white md:w-full my-4"
+                  >
+                    “Nulla a pretium diam, non accumsan odio. Nulla nec nisi
+                    massa. Etiam et velit elit. Praesent id neque lacus. Vivamus
+                    libero mi, accumsan in fringilla at, tristique at mi.”
+                  </p>
+                  <div class="arrows flex gap-5">
+                    <img
+                      class="cursor-pointer swiper-button-next"
+                      src="./assets/arrow-left.svg"
+                      alt="arrow-left"
+                    />
+                    <img
+                      class="cursor-pointer swiper-button-prev"
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card md:flex justify-center gap-12 mt-16">
+                <div class="card-img flex-1 flex justify-end">
+                  <img src="./assets/person-1.png" alt="person1" />
+                </div>
+                <div class="card-content flex-1 flex flex-col justify-around">
+                  <p
+                    class="card-text w-3/4 text-2xl leading-snug md:text-white md:w-full my-4"
+                  >
+                    “Nulla a pretium diam, non accumsan odio. Nulla nec nisi
+                    massa. Etiam et velit elit. Praesent id neque lacus. Vivamus
+                    libero mi, accumsan in fringilla at, tristique at mi.”
+                  </p>
+                  <div class="arrows flex gap-5">
+                    <img
+                      class="cursor-pointer swiper-button-next"
+                      src="./assets/arrow-left.svg"
+                      alt="arrow-left"
+                    />
+                    <img
+                      class="cursor-pointer swiper-button-prev"
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
+
+        <!-- <div class="carousel mt-16 sticky" style="top: 100%">
+          <div class="carousel-item">
+           
+          </div>
+        </div> -->
       </div>
     </section>
 
@@ -641,7 +898,7 @@
           style="
             height: 850px;
             width: 700px;
-            background: url('./assets/map-img.png') no-repeat center center;
+            background: url('./assets/map-bg.png') no-repeat center center;
             padding: 75px 60px;
           "
         >
@@ -675,13 +932,25 @@
                 <i
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="30"
-                    viewBox="0 0 32 30"
+                    width="31"
+                    height="31"
+                    viewBox="0 0 31 31"
                     fill="none"
                   >
                     <path
-                      d="M29.8183 0.321777H1.53442C0.854225 0.321777 0.304688 0.871315 0.304688 1.55151V29.8354C0.304688 30.5156 0.854225 31.0651 1.53442 31.0651H29.8183C30.4985 31.0651 31.0481 30.5156 31.0481 29.8354V1.55151C31.0481 0.871315 30.4985 0.321777 29.8183 0.321777ZM28.5886 28.6057H21.5138V19.1598H25.5104L26.1099 14.5214H21.5138V11.5585C21.5138 10.2135 21.8865 9.29884 23.8118 9.29884H26.2675V5.14849C25.8409 5.09084 24.3844 4.96403 22.6859 4.96403C19.1427 4.96403 16.7178 7.12759 16.7178 11.0973V14.5175H12.7135V19.1559H16.7216V28.6057H2.76416V2.78125H28.5886V28.6057Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.4567 8.43262C13.5931 8.43262 11.8057 9.17297 10.4879 10.4908C9.17004 11.8086 8.42969 13.596 8.42969 15.4597C8.42969 17.3234 9.17004 19.1107 10.4879 20.4286C11.8057 21.7464 13.5931 22.4867 15.4567 22.4867C17.3204 22.4867 19.1078 21.7464 20.4256 20.4286C21.7435 19.1107 22.4838 17.3234 22.4838 15.4597C22.4838 13.596 21.7435 11.8086 20.4256 10.4908C19.1078 9.17297 17.3204 8.43262 15.4567 8.43262ZM11.2405 15.4597C11.2405 16.5779 11.6847 17.6503 12.4754 18.441C13.2661 19.2317 14.3385 19.6759 15.4567 19.6759C16.575 19.6759 17.6474 19.2317 18.4381 18.441C19.2288 17.6503 19.673 16.5779 19.673 15.4597C19.673 14.3415 19.2288 13.269 18.4381 12.4783C17.6474 11.6876 16.575 11.2434 15.4567 11.2434C14.3385 11.2434 13.2661 11.6876 12.4754 12.4783C11.6847 13.269 11.2405 14.3415 11.2405 15.4597Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M23.8898 5.62158C23.517 5.62158 23.1596 5.76965 22.896 6.03322C22.6324 6.29678 22.4844 6.65426 22.4844 7.02699C22.4844 7.39973 22.6324 7.7572 22.896 8.02077C23.1596 8.28433 23.517 8.4324 23.8898 8.4324C24.2625 8.4324 24.62 8.28433 24.8836 8.02077C25.1471 7.7572 25.2952 7.39973 25.2952 7.02699C25.2952 6.65426 25.1471 6.29678 24.8836 6.03322C24.62 5.76965 24.2625 5.62158 23.8898 5.62158Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.62165 0C4.13069 0 2.7008 0.592279 1.64654 1.64654C0.592279 2.7008 0 4.13069 0 5.62165V25.2974C0 26.7884 0.592279 28.2182 1.64654 29.2725C2.7008 30.3268 4.13069 30.9191 5.62165 30.9191H25.2974C26.7884 30.9191 28.2182 30.3268 29.2725 29.2725C30.3268 28.2182 30.9191 26.7884 30.9191 25.2974V5.62165C30.9191 4.13069 30.3268 2.7008 29.2725 1.64654C28.2182 0.592279 26.7884 0 25.2974 0H5.62165ZM25.2974 2.81082H5.62165C4.87617 2.81082 4.16122 3.10696 3.63409 3.63409C3.10696 4.16122 2.81082 4.87617 2.81082 5.62165V25.2974C2.81082 26.0429 3.10696 26.7578 3.63409 27.285C4.16122 27.8121 4.87617 28.1082 5.62165 28.1082H25.2974C26.0429 28.1082 26.7578 27.8121 27.285 27.285C27.8121 26.7578 28.1082 26.0429 28.1082 25.2974V5.62165C28.1082 4.87617 27.8121 4.16122 27.285 3.63409C26.7578 3.10696 26.0429 2.81082 25.2974 2.81082Z"
                       fill="white"
                     />
                   </svg>
@@ -689,13 +958,13 @@
                 <i>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="30"
-                    viewBox="0 0 32 30"
+                    width="31"
+                    height="31"
+                    viewBox="0 0 31 31"
                     fill="none"
                   >
                     <path
-                      d="M29.8183 0.321777H1.53442C0.854225 0.321777 0.304688 0.871315 0.304688 1.55151V29.8354C0.304688 30.5156 0.854225 31.0651 1.53442 31.0651H29.8183C30.4985 31.0651 31.0481 30.5156 31.0481 29.8354V1.55151C31.0481 0.871315 30.4985 0.321777 29.8183 0.321777ZM28.5886 28.6057H21.5138V19.1598H25.5104L26.1099 14.5214H21.5138V11.5585C21.5138 10.2135 21.8865 9.29884 23.8118 9.29884H26.2675V5.14849C25.8409 5.09084 24.3844 4.96403 22.6859 4.96403C19.1427 4.96403 16.7178 7.12759 16.7178 11.0973V14.5175H12.7135V19.1559H16.7216V28.6057H2.76416V2.78125H28.5886V28.6057Z"
+                      d="M29.5293 0.0878906H1.24536C0.565163 0.0878906 0.015625 0.637428 0.015625 1.31763V29.6015C0.015625 30.2817 0.565163 30.8313 1.24536 30.8313H29.5293C30.2095 30.8313 30.759 30.2817 30.759 29.6015V1.31763C30.759 0.637428 30.2095 0.0878906 29.5293 0.0878906ZM28.2995 28.3718H21.2247V18.9259H25.2213L25.8208 14.2875H21.2247V11.3246C21.2247 9.97957 21.5975 9.06496 23.5228 9.06496H25.9784V4.9146C25.5518 4.85696 24.0954 4.73014 22.3968 4.73014C18.8536 4.73014 16.4287 6.8937 16.4287 10.8634V14.2836H12.4244V18.922H16.4326V28.3718H2.47509V2.54736H28.2995V28.3718Z"
                       fill="white"
                     />
                   </svg>
@@ -722,17 +991,42 @@
       <div class="flex justify-center h-full">
         <div class="flex flex-col justify-center mt-64 px-2 pb-16">
           <div class="mt-32">
-            <h2 class="contact-title mobile-title text-center stroke-white">
+            <h2
+              class="contact-title mobile-title text-center stroke-white mb-8"
+            >
               Build Your Route To Self-Discovery!
             </h2>
-            <p class="w-full md:w-4/5 m-auto text-center mb-64">
+            <p class="w-full md:w-3/5 m-auto text-center mb-64">
               Join Scov Gym today and enjoy personalized training programs
               designed to help you achieve your fitness goals. Start your
               journey now to transform your life, build a strong, healthy body,
               and unleash your potential.
             </p>
           </div>
-          <div
+          <div class="flex justify-center">
+            <button class="btn btn-main">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M14.0037 4H9.9963C6.21809 4 4.32899 4 3.15525 5.17157C2.27661 6.04858 2.0557 7.32572 2.00016 9.49444C1.99304 9.77248 2.22121 9.99467 2.49076 10.0652C3.35074 10.2901 3.98521 11.0711 3.98521 12C3.98521 12.9289 3.35074 13.7099 2.49076 13.9348C2.22121 14.0053 1.99304 14.2275 2.00016 14.5056C2.0557 16.6743 2.27661 17.9514 3.15525 18.8284C4.32899 20 6.21809 20 9.9963 20H14.0037C17.7819 20 19.671 20 20.8448 18.8284C21.7234 17.9514 21.9443 16.6743 21.9998 14.5056C22.007 14.2275 21.7788 14.0053 21.5092 13.9348C20.6493 13.7099 20.0148 12.9289 20.0148 12C20.0148 11.0711 20.6493 10.2901 21.5092 10.0652C21.7788 9.99467 22.007 9.77248 21.9998 9.49444C21.9443 7.32572 21.7234 6.04858 20.8448 5.17157C19.671 4 17.7819 4 14.0037 4Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M11.1459 10.0225C11.5259 9.34084 11.7159 9 12 9C12.2841 9 12.4741 9.34084 12.8541 10.0225L12.9524 10.1989C13.0603 10.3926 13.1143 10.4894 13.1985 10.5533C13.2827 10.6172 13.3875 10.641 13.5972 10.6884L13.7881 10.7316C14.526 10.8986 14.895 10.982 14.9828 11.2643C15.0706 11.5466 14.819 11.8407 14.316 12.429L14.1858 12.5812C14.0429 12.7483 13.9714 12.8319 13.9392 12.9353C13.9071 13.0387 13.9179 13.1502 13.9395 13.3733L13.9592 13.5763C14.0352 14.3612 14.0733 14.7536 13.8435 14.9281C13.6136 15.1025 13.2682 14.9435 12.5773 14.6254L12.3986 14.5431C12.2022 14.4527 12.1041 14.4075 12 14.4075C11.8959 14.4075 11.7978 14.4527 11.6014 14.5431L11.4227 14.6254C10.7318 14.9435 10.3864 15.1025 10.1565 14.9281C9.92674 14.7536 9.96476 14.3612 10.0408 13.5763L10.0605 13.3733C10.0821 13.1502 10.0929 13.0387 10.0608 12.9353C10.0286 12.8319 9.95713 12.7483 9.81418 12.5812L9.68403 12.429C9.18097 11.8407 8.92945 11.5466 9.01723 11.2643C9.10501 10.982 9.47396 10.8986 10.2119 10.7316L10.4028 10.6884C10.6125 10.641 10.7173 10.6172 10.8015 10.5533C10.8857 10.4894 10.9397 10.3926 11.0476 10.1989L11.1459 10.0225Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </svg>
+              Join to SCOV GYM Now
+            </button>
+          </div>
+          <!-- <div
             class="flex justify-center align-end relative mx-auto w-full md:w-2/5"
           >
             <input
@@ -762,21 +1056,75 @@
             >
               Subscribe
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
 
     <footer class="section section-footer bg-[#134a9a]">
-      <div class="footer-content lg:flex justify-between">
-        <div>
-          <img src="./assets/footer-img.png" alt="footer" class="w-full" />
-          <p class="text-white mt-16 md:w-[500px] mb-16">
-            Scov is a comprehensive fitness community established under the
-            auspices of the Suez Canal Authority.
-          </p>
+      <div class="footer-content">
+        <div class="block lg:flex justify-between">
+          <div>
+            <img src="./assets/footer-img.png" alt="footer" class="w-full" />
+          </div>
+          <div class="relative">
+            <p class="text-white my-8 md:w-[600px]">
+              Scov is a comprehensive fitness community established under the
+              auspices of the Suez Canal Authority.
+            </p>
+            <label class="text-xl text-white">Social Media</label>
+            <div class="flex gap-3 mt-1 mb-8">
+              <i
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.4567 8.43262C13.5931 8.43262 11.8057 9.17297 10.4879 10.4908C9.17004 11.8086 8.42969 13.596 8.42969 15.4597C8.42969 17.3234 9.17004 19.1107 10.4879 20.4286C11.8057 21.7464 13.5931 22.4867 15.4567 22.4867C17.3204 22.4867 19.1078 21.7464 20.4256 20.4286C21.7435 19.1107 22.4838 17.3234 22.4838 15.4597C22.4838 13.596 21.7435 11.8086 20.4256 10.4908C19.1078 9.17297 17.3204 8.43262 15.4567 8.43262ZM11.2405 15.4597C11.2405 16.5779 11.6847 17.6503 12.4754 18.441C13.2661 19.2317 14.3385 19.6759 15.4567 19.6759C16.575 19.6759 17.6474 19.2317 18.4381 18.441C19.2288 17.6503 19.673 16.5779 19.673 15.4597C19.673 14.3415 19.2288 13.269 18.4381 12.4783C17.6474 11.6876 16.575 11.2434 15.4567 11.2434C14.3385 11.2434 13.2661 11.6876 12.4754 12.4783C11.6847 13.269 11.2405 14.3415 11.2405 15.4597Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M23.8898 5.62158C23.517 5.62158 23.1596 5.76965 22.896 6.03322C22.6324 6.29678 22.4844 6.65426 22.4844 7.02699C22.4844 7.39973 22.6324 7.7572 22.896 8.02077C23.1596 8.28433 23.517 8.4324 23.8898 8.4324C24.2625 8.4324 24.62 8.28433 24.8836 8.02077C25.1471 7.7572 25.2952 7.39973 25.2952 7.02699C25.2952 6.65426 25.1471 6.29678 24.8836 6.03322C24.62 5.76965 24.2625 5.62158 23.8898 5.62158Z"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.62165 0C4.13069 0 2.7008 0.592279 1.64654 1.64654C0.592279 2.7008 0 4.13069 0 5.62165V25.2974C0 26.7884 0.592279 28.2182 1.64654 29.2725C2.7008 30.3268 4.13069 30.9191 5.62165 30.9191H25.2974C26.7884 30.9191 28.2182 30.3268 29.2725 29.2725C30.3268 28.2182 30.9191 26.7884 30.9191 25.2974V5.62165C30.9191 4.13069 30.3268 2.7008 29.2725 1.64654C28.2182 0.592279 26.7884 0 25.2974 0H5.62165ZM25.2974 2.81082H5.62165C4.87617 2.81082 4.16122 3.10696 3.63409 3.63409C3.10696 4.16122 2.81082 4.87617 2.81082 5.62165V25.2974C2.81082 26.0429 3.10696 26.7578 3.63409 27.285C4.16122 27.8121 4.87617 28.1082 5.62165 28.1082H25.2974C26.0429 28.1082 26.7578 27.8121 27.285 27.285C27.8121 26.7578 28.1082 26.0429 28.1082 25.2974V5.62165C28.1082 4.87617 27.8121 4.16122 27.285 3.63409C26.7578 3.10696 26.0429 2.81082 25.2974 2.81082Z"
+                    fill="white"
+                  />
+                </svg>
+              </i>
+              <i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                >
+                  <path
+                    d="M29.5293 0.0878906H1.24536C0.565163 0.0878906 0.015625 0.637428 0.015625 1.31763V29.6015C0.015625 30.2817 0.565163 30.8313 1.24536 30.8313H29.5293C30.2095 30.8313 30.759 30.2817 30.759 29.6015V1.31763C30.759 0.637428 30.2095 0.0878906 29.5293 0.0878906ZM28.2995 28.3718H21.2247V18.9259H25.2213L25.8208 14.2875H21.2247V11.3246C21.2247 9.97957 21.5975 9.06496 23.5228 9.06496H25.9784V4.9146C25.5518 4.85696 24.0954 4.73014 22.3968 4.73014C18.8536 4.73014 16.4287 6.8937 16.4287 10.8634V14.2836H12.4244V18.922H16.4326V28.3718H2.47509V2.54736H28.2995V28.3718Z"
+                    fill="white"
+                  />
+                </svg>
+              </i>
+            </div>
+            <div class="relative lg:absolute" style="bottom: 0; right: 0">
+              <img
+                src="./assets/footer-img-2.png"
+                alt="dumble"
+                class="ml-auto"
+              />
+            </div>
+          </div>
         </div>
-        <div
+        <!-- <div
           class="w-full lg:w-[500px]"
           style="
             border-radius: 9px;
@@ -814,14 +1162,20 @@
               style="mix-blend-mode: multiply"
             />
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="mt-16">
+      <div>
         <img src="./assets/Line.png" alt="line" />
       </div>
-      <div class="md:flex justify-between mt-16">
-        <p class="text-white">ⓒ2024 SCOV GYM. All rights reserved.</p>
-        <div class="cursor-pointer mt-16 md:mt-0">
+      <div class="md:flex justify-between mt-8">
+        <p class="text-white text-center lg:text-left">
+          ⓒ2024 SCOV GYM. All rights reserved.
+        </p>
+        <div
+          class="cursor-pointer mt-16 md:mt-0"
+          onclick="topFunction()"
+          id="myBtn"
+        >
           <img src="./assets/back-top.png" alt="back to top arrow" />
         </div>
       </div>
