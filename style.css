@@ -577,3 +577,62 @@ nav ul li a:hover {
   height: 50px;
   width: 50px;
 }
+
+/* Join Us Page */
+
+.form-group input:focus {
+  border-color: #134a9a !important;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .form-section .image {
+    display: none !important;
+  }
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.upload-preview {
+  width: 120px;
+  height: 120px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.upload-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #eff5f9;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.upload-button {
+  background-color: #ffffff;
+  color: #134a9a;
+  border: 1px solid #134a9a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.upload-info {
+  font-size: 0.9em;
+}
+
+#fileUpload {
+  display: none;
+}

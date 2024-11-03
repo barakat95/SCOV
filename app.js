@@ -96,7 +96,7 @@ function incrementCounter(counter) {
 // Function to format the counter
 function formatCounter(counter, target) {
   if (target >= 1000) {
-    counter.innerText = "+" + (target / 1000) + "k"; // Format to "k"
+    counter.innerText = "+" + target / 1000 + "k"; // Format to "k"
   } else {
     counter.innerText = "+" + target; // Just display the number
   }
