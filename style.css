@@ -242,7 +242,7 @@ nav ul li a:hover {
   gap: 20px;
 }
 .slider_1 {
-  animation: rotation_1 10s linear infinite;
+  animation: rotation_1 12s linear infinite;
 }
 .slider_2 {
   animation: rotation_2 10s linear infinite;
@@ -266,7 +266,7 @@ nav ul li a:hover {
 }
 @keyframes rotation_1 {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(100%);
