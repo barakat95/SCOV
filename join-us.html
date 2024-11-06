@@ -145,7 +145,7 @@
                 />
               </div>
             </div>
-            <div class="my-3 grid-cols-1">
+            <div class="my-3 grid-cols-1 form-group">
               <label for="name">Address</label>
               <input
                 type="text"
@@ -184,14 +184,41 @@
                 </div>
               </div>
             </div> -->
-            <button class="btn btn-main mt-8 ms-0" type="submit">
-              Join Now
-            </button>
+            <div class="py-8">
+              <button class="btn btn-main ms-0" type="submit">
+                Join Now
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </section>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      const form = document.querySelector("form");
+
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "mohammedbarakat75@gmail.com",
+          Password: "79168F5C928DB0321DBBF3E753812E5285E4",
+          To: "scovgym@gmail.com",
+          From: `scovgym@gmail.com`,
+          Subject: "Join to SCOV GYM",
+          Body: `
+            <p style="font-size:16px"><span style="font-weight: bold;">First Name: </span> ${form.first_name.value}</p>
+            <p style="font-size:16px"><span style="font-weight: bold;">Email: </span> ${form.email.value}</p>
+            <p style="font-size:16px"><span style="font-weight: bold;">Last Name: </span> ${form.last_name.value}</p>
+            <p style="font-size:16px"><span style="font-weight: bold;">Phone Number: </span> ${form.phone_number.value}</p>
+            <p style="font-size:16px"><span style="font-weight: bold;">Age: </span> ${form.age.value}</p>
+            <p style="font-size:16px"><span style="font-weight: bold;">ID: </span> ${form.id_number.value}</p>
+            <p style="font-size:16px"><span style="font-weight: bold;">Address: </span> ${form.address.value}</p>
+          `,
+        }).then((message) => alert(message));
+      }
+    </script>
     <script>
       // disable the form submission until the form is valid
       document.querySelector("form").addEventListener("submit", (e) => {
@@ -204,7 +231,7 @@
           data.email &&
           data.phone_number
         ) {
-          e.target.submit();
+          sendEmail();
         } else {
           alert("Please fill in the required fields");
         }
