@@ -54,12 +54,10 @@ p {
 .line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(
-    270deg,
-    rgba(162, 162, 162, 0) 0%,
-    #cbcbcb 50.5%,
-    rgba(162, 162, 162, 0) 100%
-  );
+  background: linear-gradient(270deg,
+      rgba(162, 162, 162, 0) 0%,
+      #cbcbcb 50.5%,
+      rgba(162, 162, 162, 0) 100%);
 }
 
 .lang {
@@ -216,8 +214,8 @@ nav ul li a:hover {
   position: absolute;
   bottom: 100px;
   right: 0;
-  width: 500px;
-  padding-inline-start: 40px;
+  width: 400px;
+  padding-inline-start: 100px;
 }
 
 .section-services {
@@ -232,6 +230,7 @@ nav ul li a:hover {
   overflow: hidden;
   margin-block: 12px;
 }
+
 .auto_slider {
   padding: 0px;
   margin: 0px;
@@ -241,12 +240,15 @@ nav ul li a:hover {
   align-items: center;
   gap: 20px;
 }
+
 .slider_1 {
-  animation: rotation_1 12s linear infinite;
+  animation: rotation_1 20s linear infinite;
 }
+
 .slider_2 {
-  animation: rotation_2 10s linear infinite;
+  animation: rotation_2 15s linear infinite;
 }
+
 .auto_slider li {
   display: flex;
   width: max-content;
@@ -256,26 +258,28 @@ nav ul li a:hover {
   gap: 10px;
   border-radius: 78px;
   border: 1px solid #fff;
-  background: radial-gradient(
-    107.32% 141.42% at 0% 0%,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: radial-gradient(107.32% 141.42% at 0% 0%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%);
   box-shadow: -2.462px -2.462px 123.085px 0px rgba(255, 255, 255, 0.02) inset;
   backdrop-filter: blur(10.339168548583984px);
 }
+
 @keyframes rotation_1 {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
 }
+
 @keyframes rotation_2 {
   0% {
-    transform: translateX(0%);
+    transform: translateX(50%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -477,6 +481,7 @@ nav ul li a:hover {
   .section-equipments .equipments-arrow {
     inset-inline-start: 0 !important;
   }
+
   /* .section-equipments .cards {
     flex-wrap: wrap;
   } */
@@ -526,6 +531,16 @@ nav ul li a:hover {
   display: none;
 }
 
+@media screen and (max-width: 1200px) {
+
+  .section-people .swiper-button-prev,
+  .section-people .swiper-button-next {
+    position: relative;
+    left: 0 !important;
+    margin-top: 16px;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .section-tour-web {
     display: none;
@@ -543,13 +558,15 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .section-people .swiper-button-prev,
-  .section-people .swiper-button-next {
-    position: relative;
-    left: 0 !important;
-    margin-top: 16px;
-  }
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+ 
+.section-explore .goal {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  width: 500px;
+  padding-inline-start: 100px;
+}
 }
 
 .section-services .swiper {
